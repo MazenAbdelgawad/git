@@ -58,6 +58,8 @@ public class CalcuratorGuiController implements Initializable {
 
        boolean num1,num2;
        private String numm1,numm2;
+       int i;
+       Calc res = new Calc();
     /**
      * Initializes the controller class.
      */
@@ -74,156 +76,195 @@ public class CalcuratorGuiController implements Initializable {
         
         if(num1)
         {
-            numm1.concat("1");
+            numm1 = numm1.concat("1");
             screen.setText(numm1);
-        
         }
         else
         {
-           numm2.concat("1"); 
+           numm2 = numm2.concat("1");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display2(ActionEvent event) {
-         screen.setText("2");
+         
         if(num1)
         {
-            numm1.concat("2");
+            numm1 = numm1.concat("2");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("2"); 
+           numm2 = numm2.concat("2");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display3(ActionEvent event) {
-         screen.setText("3");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("3");
+            numm1 = numm1.concat("3");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("3"); 
+           numm2 = numm2.concat("3");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display4(ActionEvent event) {
-         screen.setText("4");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("4");
+            numm1 = numm1.concat("4");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("4"); 
+           numm2 = numm2.concat("4");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display5(ActionEvent event) {
-         screen.setText("5");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("5");
+            numm1 = numm1.concat("5");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("5"); 
+           numm2 = numm2.concat("5");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display6(ActionEvent event) {
-         screen.setText("6");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("6");
+            numm1 = numm1.concat("6");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("6"); 
+           numm2 = numm2.concat("6");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display7(ActionEvent event) {
-         screen.setText("7");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("7");
+            numm1 = numm1.concat("7");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("7"); 
+           numm2 = numm2.concat("7");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display8(ActionEvent event) {
-         screen.setText("8");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("8");
+            numm1 = numm1.concat("8");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("8"); 
+           numm2 = numm2.concat("8");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display9(ActionEvent event) {
-         screen.setText("9");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("9");
+            numm1 = numm1.concat("9");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("9"); 
+           numm2 = numm2.concat("9");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void display0(ActionEvent event) {
-         screen.setText("0");
-        if(num1)
+         if(num1)
         {
-            numm1.concat("0");
+            numm1 = numm1.concat("0");
+            screen.setText(numm1);
         }
         else
         {
-           numm2.concat("0"); 
+           numm2 = numm2.concat("0");
+           screen.setText(numm2);
         }
     }
 
     @FXML
     private void displaypls(ActionEvent event) {
-        
+        num1 = false;
+        num2 = true;
+        i = 1;
     }
 
     @FXML
     private void displaysub(ActionEvent event) {
+        num1 = false;
+        num2 = true;
+        i = 2;
     }
 
     @FXML
     private void displaymul(ActionEvent event) {
+        num1 = false;
+        num2 = true;
+        i = 3;
     }
 
     @FXML
     private void displaydiv(ActionEvent event) {
+        num1 = false;
+        num2 = true;
+        i = 4;
     }
 
     @FXML
     private void displayresult(ActionEvent event) {
+        double j;
+        switch (i)
+        {
+            case 1:
+                j = res.sum(Double.valueOf(numm1), Double.valueOf(numm2));
+                screen.setText(""+j);
+            case 2:
+                j = res.sub(Double.valueOf(numm1), Double.valueOf(numm2));
+                screen.setText(""+j);
+            case 3:
+                j = res.multi(Double.valueOf(numm1), Double.valueOf(numm2));
+                screen.setText(""+j);
+            case 4:
+                j = res.div(Double.valueOf(numm1), Double.valueOf(numm2));
+                screen.setText(""+j);
+        }
+                
     }
 
     @FXML
     private void crear(ActionEvent event) {
+        screen.setText("");
     }
     
 }
