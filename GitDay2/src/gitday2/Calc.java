@@ -25,12 +25,17 @@ public class Calc implements Calculator{
     /*start Ahmed*/
     @Override
     public double multi(double n1, double n2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return n1 * n2;
     }
 
     @Override
     public double div(double n1, double n2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(n2 != 0)
+        {
+            return n1 / n2;
+        }
+        return 0;
     }
     /*end Ahmed*/
 }
