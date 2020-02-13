@@ -13,12 +13,12 @@ public class Calc implements Calculator{
     /*start Mazen */
     @Override
     public double sum(double n1, double n2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return n1+n2;
     }
 
     @Override
     public double sub(double n1, double n2) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return n1-n2;
     }
     /*end mazen*/
     
